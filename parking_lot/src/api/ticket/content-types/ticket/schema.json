@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "singularName": "ticket",
+    "pluralName": "tickets",
+    "displayName": "Ticket",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "time_in": {
+      "type": "datetime"
+    },
+    "gate": {
+      "type": "enumeration",
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "vehicle_type": {
+      "type": "enumeration",
+      "enum": [
+        "S",
+        "M",
+        "L"
+      ]
+    },
+    "allocated_space": {
+      "type": "string"
+    },
+    "parking_space": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parking-space.parking-space"
+    },
+    "vehicle_no": {
+      "type": "string"
+    }
+  }
+}

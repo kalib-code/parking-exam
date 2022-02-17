@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "Payment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ticket": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ticket.ticket"
+    },
+    "time_out": {
+      "type": "datetime"
+    },
+    "total_hours": {
+      "type": "decimal"
+    },
+    "Paid": {
+      "type": "boolean"
+    },
+    "total_amount": {
+      "type": "integer"
+    }
+  }
+}
